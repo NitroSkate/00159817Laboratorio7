@@ -311,6 +311,7 @@ void assemblyb(element e,Vector localb,Vector &b,int nnodes){
     int index2 = e.getNode2() - 1;
     int index3 = e.getNode3() - 1;
     int index4 = index1+nnodes, index5 = index2+nnodes, index6 = index3+nnodes;
+    int index7 = index1+2*nnodes, index8 = index2+2*nnodes, index9 = index3+2*nnodes;
 
     b.at(index1) += localb.at(0);
     b.at(index2) += localb.at(1);
@@ -318,5 +319,8 @@ void assemblyb(element e,Vector localb,Vector &b,int nnodes){
     b.at(index4) += localb.at(3);
     b.at(index5) += localb.at(4);
     b.at(index6) += localb.at(5);
+    b.at(index7) += localb.at(6);
+    b.at(index8) += localb.at(7);
+    b.at(index9) += localb.at(8);
 }
 
